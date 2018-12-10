@@ -27,13 +27,13 @@ void pyramid(int height)
   /* print out the rows of the pyramid */
   for (int j = 0; j < height; j++) {
 
-    /*printing out spaces of the pyramid*/
+    /*print out spaces of the pyramid*/
     for (int i = 0; i < spaces; i++) {
       /* print out spaces */
       printf(" ");
     }
 
-    //printing out hashes rows of the pyramid
+    //print out hashes rows of the pyramid
     for (int i = 0; i < hashes; i++)
     {
       printf("#");
