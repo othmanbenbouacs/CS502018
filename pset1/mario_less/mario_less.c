@@ -2,15 +2,49 @@
 #include "cs50.h"
 
 int checkpoint(void);
+void pyramid(int height);
+
 
 int main(int argc, char const *argv[]) {
   /* prompt the user for a valid input */
   /*asking the user for a height in the domain [0, 23]*/
   int height = checkpoint();
 
+  /*print out the pyramid*/
+  /*print out the rows of the pyramid*/
+  pyramid(height);
 
   return 0;
 }
+
+
+/*building the pyramid*/
+void pyramid(int height)
+{
+  int spaces = height - 1;
+  int hashes = height - 2;
+
+  /* print out the rows of the pyramid */
+  for (int j = 0; j < height; j++) {
+
+    /*printing out spaces of the pyramid*/
+    for (int i = 0; i < spaces; i++) {
+      /* print out spaces */
+      printf(" ");
+    }
+
+    //printing out hashes rows of the pyramid
+    for (int i = 0; i < hashes; i++)
+    {
+      printf("#");
+    }
+    // New line
+    printf("\n");
+    spaces--;
+    hashes++;
+  }
+}
+
 
 //checkpoint: asking the user for a valid height until is valid
 int checkpoint(void)
