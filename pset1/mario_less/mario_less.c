@@ -22,7 +22,7 @@ int main(int argc, char const *argv[]) {
 void pyramid(int height)
 {
   int spaces = height - 1;
-  int hashes = height - 2;
+  int hashes = 2;
 
   /* print out the rows of the pyramid */
   for (int j = 0; j < height; j++) {
